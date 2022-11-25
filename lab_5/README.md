@@ -73,7 +73,7 @@ https://www.kaggle.com/datasets/ </br>
 ![screen_4.png](images/screen_4.png)
 </br>
 
-8. Выведем **уникальные значения признака**, в соответствии с которым и будет проходить классификация.
+8. Выведем **уникальные значения признака**, в соответствии с которым и будет проходить классификация. </br>
 <code>print('\nThe value quality : ', dataset['quality'].unique())</code> </br></br>
 ![screen_5.png](images/screen_5.png)
 </br>
