@@ -56,26 +56,25 @@ https://www.kaggle.com/datasets/ </br>
 </br>
 
 5. Выявим **размерность**.
-<code>print('\nShape the DataSet : ', dataset.shape)</code>
+<code>print('\nShape the DataSet : ', dataset.shape)</code> </br>
 ![screen_2.png](images/screen_2.png)
 <br>
 
-6. Вывод о том, понадобится ли **предобработка данных**.</br>
-<code>print(dataset.isnull().sum())</code></br>
-![screen_3.png](images/screen_3.png)
-</br>
+6. Вывод о том, понадобится ли **предобработка данных**.
+<code>print(dataset.isnull().sum())</code> </br></br>
+![screen_3.png](images/screen_3.png)</br>
 Т.к. пустых значений нет, **предобработка данных не требуется**.
 <br>
 
 7. Выводим **описательную статистику**.</br>
 **Функция describe ()** возвращает некоторые общие статистические данные данных, 
 включая среднее значение, стандартное отклонение, минимальный элемент, максимальный элемент и некоторые другие детали
-<code>print(dataset.describe().round(2))</code></br>
+<code>print(dataset.describe().round(2))</code> </br></br>
 ![screen_4.png](images/screen_4.png)
 </br>
 
 8. Выведем **уникальные значения признака**, в соответствии с которым и будет проходить классификация.
-<code>print('\nThe value quality : ', dataset['quality'].unique())</code></br>
+<code>print('\nThe value quality : ', dataset['quality'].unique())</code> </br>
 ![screen_5.png](images/screen_5.png)
 </br>
 
@@ -85,26 +84,23 @@ https://www.kaggle.com/datasets/ </br>
 </br>
 
 10. Анализ результатов.
-</br>
-    Выделено 5 типов качества вина от 3 до 8
-    - Лучшее качество вина - 8.
-    - Худшее качество вина - 3.
-    </br>
-    Элементы, оказывающие наибольшее влияние на качество вина:
-    - Alcohol (алкоголь) 
-    - Free sulfur dioxide (Свободный диоксид серы, двуокись)
-    - Total sulfur dioxide (общий диоксид серы)
-    </br>
-    Элементы, оказывающие наименьшее влияние на качества вина:
-    - Fixed acidity 
-    - Volatile acidity 
-    - Citric acid 
-    - Residual sugar 
-    - Chlorides 
-    - Density 
-    - PH 
-    - Sulphates
-</br>
+
+    Выделено 5 типов качества вина от 3 до 8 </br>
+    - Лучшее качество вина - 8. </br>
+    - Худшее качество вина - 3. </br>
+    Элементы, оказывающие наибольшее влияние на качество вина: </br>
+    - Alcohol (алкоголь) </br> 
+    - Free sulfur dioxide (Свободный диоксид серы, двуокись) </br>
+    - Total sulfur dioxide (общий диоксид серы) </br>
+    Элементы, оказывающие наименьшее влияние на качества вина: </br>
+    - Fixed acidity </br>
+    - Volatile acidity </br>
+    - Citric acid </br>
+    - Residual sugar </br>
+    - Chlorides </br>
+    - Density </br>
+    - PH </br>
+    - Sulphates </br>
 
 11. Сформируем наборы данных матрицы X и вектора y.
 <code>X = dataset.drop(columns='quality').values</code>
@@ -113,7 +109,7 @@ https://www.kaggle.com/datasets/ </br>
 <br>
 
 12. Разделим dataset на тренировочные и тестовые данные, а затем отобразим размерность массивов.
-<code>X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)</code></br>
+<code>X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)</code> </br></br>
 ![screen_7.png](images/screen_7.png)
 </br>
 
@@ -177,7 +173,7 @@ https://www.kaggle.com/datasets/ </br>
 метод оценки - accuracy score (показывает точность, то есть доля выборок, правильно спрогнозированных значений).</br>
 ![screen_26.png](images/screen_26.png)
 </br></br>
-**Отображение результатов графически**</br>
+**Отображение результатов графически** </br>
 ![screen_27.png](images/screen_27.png)
 </br></br>
 **Тестовые и прогнозируемые значения**</br>
