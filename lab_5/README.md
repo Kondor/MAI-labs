@@ -52,7 +52,7 @@ https://www.kaggle.com/datasets/ </br>
 
 4. Для анализирования просмотрим **набор данных**.
 <code>print(dataset.head())</code>
-</br>
+<br>
 ![screen_1.png](images/screen_1.png)
 <br>
 
