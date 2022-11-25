@@ -51,12 +51,12 @@ https://www.kaggle.com/datasets/ </br>
 3. Обучение происходит **по всем признакам**.
 
 4. Для анализирования просмотрим **набор данных**.
-<code>print(dataset.head())</code></br>
+<code>print(dataset.head())</code> </br></br>
 ![screen_1.png](images/screen_1.png)
 </br>
 
 5. Выявим **размерность**.
-<code>print('\nShape the DataSet : ', dataset.shape)</code> </br>
+<code>print('\nShape the DataSet : ', dataset.shape)</code> </br></br>
 ![screen_2.png](images/screen_2.png)
 <br>
 
@@ -74,12 +74,12 @@ https://www.kaggle.com/datasets/ </br>
 </br>
 
 8. Выведем **уникальные значения признака**, в соответствии с которым и будет проходить классификация.
-<code>print('\nThe value quality : ', dataset['quality'].unique())</code> </br>
+<code>print('\nThe value quality : ', dataset['quality'].unique())</code> </br></br>
 ![screen_5.png](images/screen_5.png)
 </br>
 
 9. Произведем группировку **по уникальным значениям признака** и выведем средние значения.
-<code>print(dataset.groupby('quality').mean().round(2))</code></br>
+<code>print(dataset.groupby('quality').mean().round(2))</code> </br></br>
 ![screen_6.png](images/screen_6.png)
 </br>
 
@@ -88,10 +88,12 @@ https://www.kaggle.com/datasets/ </br>
     Выделено 5 типов качества вина от 3 до 8 </br>
     - Лучшее качество вина - 8. </br>
     - Худшее качество вина - 3. </br>
+    
     Элементы, оказывающие наибольшее влияние на качество вина: </br>
     - Alcohol (алкоголь) </br> 
     - Free sulfur dioxide (Свободный диоксид серы, двуокись) </br>
     - Total sulfur dioxide (общий диоксид серы) </br>
+    
     Элементы, оказывающие наименьшее влияние на качества вина: </br>
     - Fixed acidity </br>
     - Volatile acidity </br>
@@ -100,21 +102,19 @@ https://www.kaggle.com/datasets/ </br>
     - Chlorides </br>
     - Density </br>
     - PH </br>
-    - Sulphates </br>
-
-11. Сформируем наборы данных матрицы X и вектора y.
-<code>X = dataset.drop(columns='quality').values</code>
+    - Sulphates
 </br>
-<code>y = dataset['quality'].values</code>
-<br>
+
+11. Сформируем наборы данных матрицы X и вектора y. </br>
+<code>X = dataset.drop(columns='quality').values</code> </br>
+<code>y = dataset['quality'].values</code> </br>
 
 12. Разделим dataset на тренировочные и тестовые данные, а затем отобразим размерность массивов.
 <code>X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)</code> </br></br>
 ![screen_7.png](images/screen_7.png)
 </br>
 
-13. Рассмотрим эффективность _**метода ближайших соседей(k-NN)**_.
-</br>
+13. Рассмотрим эффективность _**метода ближайших соседей(k-NN)**_. </br>
 Предоставим классификационный отчет, матрицу ошибок, метод оценки - score (показывает точность), 
 метод оценки - accuracy score (показывает точность, то есть доля выборок, правильно спрогнозированных значений).</br>
 ![screen_8.png](images/screen_8.png)
