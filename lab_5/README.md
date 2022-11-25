@@ -51,10 +51,9 @@ https://www.kaggle.com/datasets/ </br>
 3. Обучение происходит **по всем признакам**.
 
 4. Для анализирования просмотрим **набор данных**.
-<code>print(dataset.head())</code>
-<br>
+<code>print(dataset.head())</code></br>
 ![screen_1.png](images/screen_1.png)
-<br>
+</br>
 
 5. Выявим **размерность**.
 <code>print('\nShape the DataSet : ', dataset.shape)</code>
