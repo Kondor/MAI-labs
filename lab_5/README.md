@@ -60,33 +60,29 @@ https://www.kaggle.com/datasets/ </br>
 ![screen_2.png](images/screen_2.png)
 <br>
 
-6. Вывод о том, понадобится ли **предобработка данных**. </br>
-<code>print(dataset.isnull().sum())</code>
-<br>
+6. Вывод о том, понадобится ли **предобработка данных**.</br>
+<code>print(dataset.isnull().sum())</code></br>
 ![screen_3.png](images/screen_3.png)
-<br>
+</br>
 Т.к. пустых значений нет, **предобработка данных не требуется**.
 <br>
 
 7. Выводим **описательную статистику**.</br>
 **Функция describe ()** возвращает некоторые общие статистические данные данных, 
 включая среднее значение, стандартное отклонение, минимальный элемент, максимальный элемент и некоторые другие детали
-<code>print(dataset.describe().round(2))</code>
-<br>
+<code>print(dataset.describe().round(2))</code></br>
 ![screen_4.png](images/screen_4.png)
-<br>
+</br>
 
 8. Выведем **уникальные значения признака**, в соответствии с которым и будет проходить классификация.
-<code>print('\nThe value quality : ', dataset['quality'].unique())</code>
-<br>
+<code>print('\nThe value quality : ', dataset['quality'].unique())</code></br>
 ![screen_5.png](images/screen_5.png)
-<br>
+</br>
 
 9. Произведем группировку **по уникальным значениям признака** и выведем средние значения.
-<code>print(dataset.groupby('quality').mean().round(2))</code>
-<br>
+<code>print(dataset.groupby('quality').mean().round(2))</code></br>
 ![screen_6.png](images/screen_6.png)
-<br>
+</br>
 
 10. Анализ результатов.
 </br>
@@ -117,104 +113,79 @@ https://www.kaggle.com/datasets/ </br>
 <br>
 
 12. Разделим dataset на тренировочные и тестовые данные, а затем отобразим размерность массивов.
-<code>X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)</code>
-<br>
+<code>X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)</code></br>
 ![screen_7.png](images/screen_7.png)
 </br>
 
 13. Рассмотрим эффективность _**метода ближайших соседей(k-NN)**_.
 </br>
 Предоставим классификационный отчет, матрицу ошибок, метод оценки - score (показывает точность), 
-метод оценки - accuracy score (показывает точность, то есть доля выборок, правильно спрогнозированных значений).
-</br>
+метод оценки - accuracy score (показывает точность, то есть доля выборок, правильно спрогнозированных значений).</br>
 ![screen_8.png](images/screen_8.png)
 </br></br>
-**Отображение результатов графически**
-</br>
+**Отображение результатов графически**</br>
 ![screen_9.png](images/screen_9.png)
 </br></br>
-**Тестовые и прогнозируемые значения**
-</br>
-![screen_10.png](images/screen_10.png)
-</br>
-![screen_11.png](images/screen_11.png)
-</br>
+**Тестовые и прогнозируемые значения**</br>
+![screen_10.png](images/screen_10.png)</br>
+![screen_11.png](images/screen_11.png)</br>
 ![screen_12.png](images/screen_12.png)
 </br></br>
-**Гистограмма зависимости данных от признака качество (quality)**
-</br>
+**Гистограмма зависимости данных от признака качество (quality)**</br>
 ![screen_13.png](images/screen_13.png)
 </br></br>
 
 14. Рассмотрим эффективность _**метода опорных векторов (модель SVK)**_.
 </br>
 Предоставим классификационный отчет, матрицу ошибок, метод оценки - score (показывает точность), 
-метод оценки - accuracy score (показывает точность, то есть доля выборок, правильно спрогнозированных значений).
-</br>
+метод оценки - accuracy score (показывает точность, то есть доля выборок, правильно спрогнозированных значений).</br>
 ![screen_14.png](images/screen_14.png)
 </br></br>
-**Отображение результатов графически**
-</br>
+**Отображение результатов графически**</br>
 ![screen_15.png](images/screen_15.png)
 </br></br>
-**Тестовые и прогнозируемые значения**
-</br>
-![screen_16.png](images/screen_16.png)
-</br>
-![screen_17.png](images/screen_17.png)
-</br>
+**Тестовые и прогнозируемые значения**</br>
+![screen_16.png](images/screen_16.png)</br>
+![screen_17.png](images/screen_17.png)</br>
 ![screen_18.png](images/screen_18.png)
 </br></br>
-**Гистограмма зависимости данных от признака качество (quality)**
-</br>
+**Гистограмма зависимости данных от признака качество (quality)**</br>
 ![screen_19.png](images/screen_19.png)
 </br></br>
 
 15. Рассмотрим эффективность _**классификатора дерева решений**_.
 </br>
 Предоставим классификационный отчет, матрицу ошибок, метод оценки - score (показывает точность), 
-метод оценки - accuracy score (показывает точность, то есть доля выборок, правильно спрогнозированных значений).
-</br>
+метод оценки - accuracy score (показывает точность, то есть доля выборок, правильно спрогнозированных значений).</br>
 ![screen_20.png](images/screen_20.png)
 </br></br>
-**Отображение результатов графически**
-</br>
+**Отображение результатов графически**</br>
 ![screen_21.png](images/screen_21.png)
 </br></br>
-**Тестовые и прогнозируемые значения**
-</br>
-![screen_22.png](images/screen_22.png)
-</br>
-![screen_23.png](images/screen_23.png)
-</br>
+**Тестовые и прогнозируемые значения**</br>
+![screen_22.png](images/screen_22.png)</br>
+![screen_23.png](images/screen_23.png)</br>
 ![screen_24.png](images/screen_24.png)
 </br></br>
-**Гистограмма зависимости данных от признака качества (quality)**
-</br>
+**Гистограмма зависимости данных от признака качества (quality)**</br>
 ![screen_25.png](images/screen_25.png)
 </br></br>
 
 16. Рассмотрим эффективность _**наивного байесовского метода (рассматривается гауссовский байесовский классификатор)**_.
 </br>
 Предоставим классификационный отчет, матрицу ошибок, метод оценки - score (показывает точность), 
-метод оценки - accuracy score (показывает точность, то есть доля выборок, правильно спрогнозированных значений).
-</br>
+метод оценки - accuracy score (показывает точность, то есть доля выборок, правильно спрогнозированных значений).</br>
 ![screen_26.png](images/screen_26.png)
 </br></br>
-**Отображение результатов графически**
-</br>
+**Отображение результатов графически**</br>
 ![screen_27.png](images/screen_27.png)
 </br></br>
-**Тестовые и прогнозируемые значения**
-</br>
-![screen_28.png](images/screen_28.png)
-</br>
-![screen_29.png](images/screen_29.png)
-</br>
+**Тестовые и прогнозируемые значения**</br>
+![screen_28.png](images/screen_28.png)</br>
+![screen_29.png](images/screen_29.png)</br>
 ![screen_30.png](images/screen_30.png)
 </br></br>
-**Гистограмма зависимости данных от признака качества (quality)**
-</br>
+**Гистограмма зависимости данных от признака качества (quality)**</br>
 ![screen_31.png](images/screen_31.png)
 </br></br>
 
